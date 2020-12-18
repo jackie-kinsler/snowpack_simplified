@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <script src="/static/js/img_coord.js"></script>
+    <script src="/static/js/map.js"></script>
+    <!-- API KEY IS RESTRICED -->
+    <script 
+        async defer
+        src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_MAP_API }}&libraries=places&callback=initMap">
+    </script>
+{% endblock %}
+
+{% block title %}SNOW PACK{% endblock %}
+
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col header-col">
+      <div>
+        Explore current and historical snow depth
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 offset-md-3 search-col">
+      <img class="hide-small" id="magnifying-glass" src="/static/images/search.svg">
+      <input id="search-box" class="search-box" type="text" 
+            placeholder="Search cities, trails, etc. to see snow data... ">
+    </div>
+  </div>
+  <div class="row date-row">
+    <div class="col">
+      <form id="date-form">
+        <div>
+          <label for="date">Historical data:</label>
+          <input type="date" id="calendar" min="2012-03-01" max={{latest_date}} 
+                 required pattern="\d{4}-\d{2}-\d{2}" value={{latest_date}}>
+          <input class="submit calendar-go" type="submit" value="Go!">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row d-md-none">
+    <img id="horiz-depth-key" src="/static/images/horiz_key.svg" 
+    class="img-fluid" 
+    alt="Snow depth key responsive image">
+  </div>
+  <div class="row" id="map-row">
+    <div class="col">
+      <div id="map"></div>
+    </div>
+    <div class="col-1 offset-11 d-none d-md-block" id="map-div">
+      <img id="vert-depth-key" src="/static/images/vert_key.svg" 
+        class="img-fluid" 
+        alt="Snow depth key responsive image">
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

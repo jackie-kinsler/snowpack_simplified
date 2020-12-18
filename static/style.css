@@ -1,0 +1,286 @@
+@media only screen and (max-width: 370px) {
+  .hide-small {
+      display: none;
+  }
+}
+
+ html, body {
+  /* height: 100vh; */
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.65)), url("/static/images/shuksan.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.rounded-input {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 30px;
+  width: 50%;
+}
+.container {
+  margin-top: 8px;
+  color: rgb(50, 51, 46);
+  
+}
+li {
+  list-style-type: none;
+}
+
+/* MAP */
+#map {
+  height: 700px;
+  width: 100%;
+  border-radius: 25px;
+}
+
+#search-box {
+  border: 2px solid rgb(110, 113, 116);
+  border-radius: 4px;
+  position: relative;
+  width: 85%;
+  background-color: rgba(250,250,250);
+  margin-left: 15px;
+  padding: 10px;
+}
+
+#search-box:focus{
+  border: 2px solid rgba(133, 97, 243, 1);
+  outline: none;
+}
+
+
+#map-row {
+  height: 100vh;
+}
+
+#magnifying-glass {
+  height: 29px;
+}
+
+th,
+td {
+	background-color: rgba(204, 204, 204, 0.2);
+  color: rgb(50, 51, 46);
+}
+
+th {
+  background-color: rgba(87, 83, 102, 0.2);
+  font-weight: 700;
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.favorite-trail-name {
+  text-decoration: underline;
+  color: rgb(50, 51, 46); 
+}
+
+.favorite-trail-name:hover {
+  color:#6e7dab; 
+  font-weight: 600;
+}
+
+.input-with-unit {
+  padding-left: 0px;
+}
+
+.form-control-file{
+  padding-left: 0px;
+}
+
+.submit {
+	background-color: rgb(90, 90, 90);
+  border-radius: 10px;
+  border: 2px solid rgb(51, 51, 51);
+  display: inline-block;
+  cursor: pointer;
+  color: #e2e2e2;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 5px 20px;
+  text-decoration: none;
+}
+.submit:hover {
+  background-color:rgba(133, 97, 243, 1);
+  
+}
+.submit:active {
+	position:relative;
+	top:1px;
+}
+
+.form-group {
+  margin-bottom: 4px;
+}
+
+.form-control {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.delete-button:hover {
+  background-color: rgba(199, 81, 81, 0.8);
+  color:rgb(242, 244, 217);
+}
+
+.add-to-trail-db-button:hover {
+  background-color: rgba(65, 116, 65, 0.8);
+  color:rgb(242, 244, 217);
+}
+
+.edit-button:hover {
+  background-color: rgba(110, 125, 171, 0.8);
+  color:rgb(242, 244, 217);
+}
+
+.mod-action{
+  width: 10px;
+}
+
+.limit-height {
+  max-height: 700px;
+}
+
+.credential-button{
+  background-color: rgba(133, 97, 243, 1);
+  border: 1px solid rgba(133, 97, 243, 1);
+  color: #efefef;
+}
+
+.credential-button:hover {
+  color: rgb(255, 255, 255);
+  border: 1px solid white
+}
+
+/* FLASH MESSAGES */
+.flash-msg{
+  background-color: rgba(110, 125, 171, 0.507);
+}
+
+.search-col{
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background: rgba(255,255,255, 0.2);
+  background-clip: border-box;
+}
+
+.header-col{
+  text-align: center;
+  font-size: 300%;
+  font-weight: 400;
+  color: rgb(56, 59, 65);
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.date-row{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#vert-depth-key {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  z-index: 1;
+  bottom: 600px;
+}
+
+#horiz-depth-key {
+ width: 100%; 
+ padding: 5px;
+}
+
+#calendar {
+  padding: 5px;
+  background-color: rgba(255, 255, 255, .35);
+  color: #383b41;
+  font-family: Quicksand;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-weight: 450;
+}
+
+#calendar:focus {
+  border: 2px solid rgba(133, 97, 243, 1);
+  outline: none;
+}
+
+h3 { 
+  margin-bottom: 10px;
+}
+
+.filter-box {
+  border: 1px solid rgb(110, 113, 116);
+  border-radius: 4px;
+  background-color: rgba(250,250,250);
+  padding: 4px;
+  width: 27%;
+}
+
+.add-a-trail {
+  margin-bottom: 80px; 
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.favorite-button {
+  background-image: url("/static/images/heart.svg");
+  background-size: cover; 
+  background-color: #00ffff00;
+  border: none;
+  width: 29px;
+  height: 28px;
+}
+
+.favorite-button:hover {
+  transform: scale(1.2);
+}
+
+.display-button{ 
+  background-image: url("/static/images/eye.svg");
+  background-size: cover; 
+  background-color: #00ffff00;
+  border: none;
+  width: 37px;
+  height: 24px;
+}
+
+.display-button:hover {
+  transform: scale(1.2);
+}
+
+#trail-table{
+  margin-top: 10px;
+}
+
+#trail-results {
+  height: 695px;
+  overflow: auto;
+}
+
+.author-img{
+  border-radius: 50%;
+  width: 65%;
+}
+
+.insta-logo{
+  height: 25px;
+}
+
+.smile {
+  height: 1em; 
+}
