@@ -16,7 +16,9 @@ from flask import (
     session, 
     redirect, 
     jsonify, 
-    url_for)
+    url_for,
+    send_from_directory,
+    )
 
 from jinja2 import StrictUndefined
 # from werkzeug.utils import secure_filename
@@ -99,6 +101,10 @@ def store_map_details():
                      }
         return jsonify(map_params)
 
+@app.route('/super_duper_top_secret_thingy_seriously_dont_look', methods = ['GET'])
+def host_scraper_log():
+    """Host the mhm scraper."""
+    return send_from_directory('/Users/jackiekinsler', 'delete.txt')
 
 def find_usable_date(try_date):
     """Takes a datetime object. Returns a datetime object of the latest
@@ -106,7 +112,7 @@ def find_usable_date(try_date):
 
     str_date = str(try_date).replace("-", "")
 
-    url = f'https://www.nohrsc.noaa.gov/snow_model/GE/{str_date}/'
+    url = f"https://www.nohrsc.noaa.gov/snow_model/GE/{str_date}/"
     page = requests.get(url, verify=False)
 
     # If the resource for the requested date is not found, try 
