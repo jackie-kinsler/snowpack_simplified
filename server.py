@@ -101,10 +101,20 @@ def store_map_details():
                      }
         return jsonify(map_params)
 
-@app.route('/super_duper_top_secret_thingy_seriously_dont_look', methods = ['GET'])
+@app.route('/logs/log.txt', methods = ['GET'])
 def host_scraper_log():
     """Host the mhm scraper."""
-    return send_from_directory('/Users/jackiekinsler', 'delete.txt')
+    return send_from_directory('/home/ubuntu/mhm-scraper', 'log.txt')
+
+@app.route('/logs/blurb.txt', methods = ['GET'])
+def host_blurb_log():
+    """Host the mhm scraper."""
+    return send_from_directory('/home/ubuntu/mhm-scraper', 'blurb.txt')
+
+@app.route('/logs/lifts.txt', methods = ['GET'])
+def host_lifts_log():
+    """Host the mhm scraper."""
+    return send_from_directory('/home/ubuntu/mhm-scraper', 'lifts.txt')
 
 def find_usable_date(try_date):
     """Takes a datetime object. Returns a datetime object of the latest
@@ -126,4 +136,4 @@ def find_usable_date(try_date):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run()
